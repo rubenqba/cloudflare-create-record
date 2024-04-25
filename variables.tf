@@ -1,8 +1,4 @@
 
-variable "cloudflare_api_token" {
-  sensitive = true
-}
-
 variable "domain_name" {
   type = string
   description = "Cloudflare Domain Name"
