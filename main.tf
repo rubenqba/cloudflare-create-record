@@ -16,6 +16,7 @@ resource "cloudflare_record" "records" {
   name     = each.value.name
   type     = each.value.type
   value    = each.value.value
+  allow_overwrite = true
   comment = "handled by terraform"
 }
 
