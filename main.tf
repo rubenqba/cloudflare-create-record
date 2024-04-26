@@ -6,13 +6,13 @@ terraform {
   }
 }
 
-data "cloudflare_zone" "dardeus" {
+data "cloudflare_zone" "zone" {
   name = var.domain_name
 }
 
 resource "cloudflare_record" "records" {
   for_each = { for record in var.dns_records : record.name => record }
-  zone_id  = data.cloudflare_zone.dardeus.zone_id
+  zone_id  = data.cloudflare_zone.zone.zone_id
   name     = each.value.name
   type     = each.value.type
   value    = each.value.value
