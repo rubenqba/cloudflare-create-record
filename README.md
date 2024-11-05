@@ -8,6 +8,8 @@ The module requires the following variables to function properly:
 
 - `domain_name`: This is a string variable indicating the name of the Cloudflare domain to manage.
 - `dns_records`: This is a list of objects representing the DNS records to be managed in Cloudflare. Each object in the list should have name, type, and value. The name is a string representing the name of the record, type is also a string indicating the type of record (e.g., "A", "CNAME", etc.), and value is a string indicating the value associated with the record.
+- `allow_overwrite`: This is a boolean variable indicating whether to allow overwriting of existing DNS records. Defaults to `true`.
+- `proxied`: This is a boolean variable indicating whether the DNS record should be proxied. Defaults to `true`.
 
 ## Usage
 
